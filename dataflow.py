@@ -67,11 +67,11 @@ def run(argv=None):
   parser = argparse.ArgumentParser()
   parser.add_argument('--input',
                       dest='input',
-                      default='gs://gcp-practice-218808.appspot.com/xml_files/dataset-test.xml',
-                      help='Input file to process.')
-  parser.add_argument('--output',
+                      default='gs://assetexample/python/dataset-single-line.xml',
+					  help='Input file to process.')
+  parser.add_argument('--output', 
                       dest='output',
-                      default='gs://gcp-practice-218808.appspot.com/test',
+                      default='gs://assetexample/python/test',
                       help='Output file to write results to.')
   parser.add_argument(
       '--output_table', required=False,
