@@ -81,11 +81,11 @@ def run(argv=None):
   parser = argparse.ArgumentParser()
   parser.add_argument('--input',
                       dest='input',
-                      default='gs://gcp-practice-218808.appspot.com/complexDataset/*.xml',
+                      default='gs://assetexample/python/complexDataset.xml',
                       help='Input file to process.')
   parser.add_argument('--output',
                       dest='output',
-                      default='gs://gcp-practice-218808.appspot.com/output',
+                      default='gs://assetexample/python/test',
                       help='Output file to write results to.')
   parser.add_argument(
       '--output_table', required=False,
@@ -103,13 +103,13 @@ def run(argv=None):
     '--runner=DataflowRunner',
     # CHANGE 3/5: Your project ID is required in order to run your pipeline on
     # the Google Cloud Dataflow Service.
-    '--project=gcp-practice-218808',
+    '--project=red-delight-223804',
     # CHANGE 4/5: Your Google Cloud Storage path is required for staging local
     # files.
-    '--staging_location=gs://gcp-practice-218808.appspot.com/dataflow/staging/',
+    '--staging_location=gs://assetexample/dataflow/staging/',
     # CHANGE 5/5: Your Google Cloud Storage path is required for temporary
     # files.
-    '--temp_location=gs://gcp-practice-218808.appspot.com/dataflow/tmp/',
+    '--temp_location=gs://assetexample/dataflow/tmp/',
   ])
   pipeline_options = PipelineOptions(pipeline_args)
   pipeline_options.view_as(SetupOptions).save_main_session = True
